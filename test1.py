@@ -31,6 +31,9 @@ temp_char = str(temp_val)
 hum_val = 65
 hum_char = str(hum_val)
 
+soil_val = 84
+soil_char = str(soil_val)
+
 lcd.write_string('Temp:')
 lcd.write_string(temp_char)
 lcd.write(0)
@@ -39,6 +42,11 @@ lcd.write_string('C')
 lcd._set_cursor_pos(Hum_pos)
 lcd.write_string('Hum:')
 lcd.write_string(hum_char)
+lcd.write_string('%')
+
+lcd._set_cursor_pos(Soil_pos)
+lcd.write_string('H_Suelo:')
+lcd.write_string(soil_char)
 lcd.write_string('%')
 
 lcd._set_cursor_pos(Lights_Pos)
